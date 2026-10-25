@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <title>doIT · Your AWS infrastructure, one desktop app</title>
+    <meta
+      name="description"
+      content="doIT is a desktop app that sets up AWS networking, deploys containers to Amazon ECS and keeps them running: live logs, health, costs, recommendations and environments. For Windows, macOS and Linux."
+    />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="motion.js"></script>
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <div class="wrap nav-row">
+        <a class="brand" href="#top" aria-label="doIT home"><span class="brand-mark" aria-hidden="true">◆</span> doIT</a>
+        <nav aria-label="Sections">
+          <a href="#tour">Tour</a>
+          <a href="#how">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#install">Install</a>
+        </nav>
+        <a class="nav-cta" href="#download">Download</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ============ Hero ============ -->
+      <section class="hero" id="hero">
+        <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="wrap hero-copy">
+          <p class="eyebrow" data-reveal>For macOS, Windows and Linux</p>
+          <h1 class="display" data-reveal>
+            Your AWS infrastructure.<br />
+            <span class="gradient-text">One desktop app.</span>
+          </h1>
+          <p class="lede" data-reveal>
+            Set up networking, deploy containers to Amazon ECS and keep them healthy, with Terraform it runs for you.
+            Everything is created in your own AWS account, and stays yours.
+          </p>
+          <div id="hero-download" class="hero-download" aria-live="polite" data-reveal>
+            <p class="muted">Checking the latest release…</p>
+          </div>
+          <noscript>
+            <p class="notice">Turn on JavaScript to see the downloads, or open <a href="releases.json">releases.json</a>.</p>
+          </noscript>
+          <a class="more-link" href="#tour" data-reveal>Take the tour <span aria-hidden="true">›</span></a>
+        </div>
+        <div class="hero-stage" id="hero-stage">
+          <figure class="window hero-window">
+            <div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">doIT</span></div>
+            <img
+              src="screenshots/dashboard.webp"
+              width="1440"
+              height="900"
+              fetchpriority="high"
+              alt="doIT's dashboard: six applications across prod and uat, each with its live cluster CPU, health and anything to review."
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- ============ Stats ============ -->
+      <section class="stats" aria-label="doIT in numbers">
+        <div class="wrap stats-row">
+          <div class="stat" data-reveal>
+            <p class="stat-value"><span data-count="12">12</span></p>
+            <p class="stat-label">installers: Intel and ARM, for macOS, Windows and Linux</p>
+          </div>
+          <div class="stat" data-reveal>
+            <p class="stat-value"><span>0</span></p>
+            <p class="stat-label">doIT servers between you and AWS. Your keys stay on your computer.</p>
+          </div>
+          <div class="stat" data-reveal>
+            <p class="stat-value"><span data-count="100">100</span>%</p>
+            <p class="stat-label">of what it builds lives in your own AWS account</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Tour ============ -->
+      <section class="tour" id="tour">
+        <div class="wrap">
+          <header class="intro" data-reveal>
+            <p class="eyebrow">The tour</p>
+            <h2 class="headline">Everything about an application.<br /><span class="gradient-text">On one page.</span></h2>
+          </header>
+          <div class="tour-grid">
+            <div class="tour-steps">
+              <article class="tour-step is-active" data-step="0">
+                <p class="kicker">Dashboard</p>
+                <h3>Every application, at a glance.</h3>
+                <p>Each application you deploy, with its live cluster CPU, its health, and anything worth a look, across every account and region you use.</p>
+                <figure class="window step-shot"><img src="screenshots/dashboard.webp" width="1440" height="900" loading="lazy" alt="The dashboard with six applications and their live CPU." /></figure>
+              </article>
+              <article class="tour-step" data-step="1">
+                <p class="kicker">Services</p>
+                <h3>Many services, one load balancer.</h3>
+                <p>
+                  Add components that serve their own paths, like <code>/api</code> or <code>/checkout</code>, each its own ECS service. Change an image,
+                  size or task count in place, restart a service, and give the application PostgreSQL: disposable for tests, or Amazon RDS with backups and
+                  Multi-AZ.
+                </p>
+                <figure class="window step-shot"><img src="screenshots/components.webp" width="1440" height="900" loading="lazy" alt="An application's three services, each with its route, tasks and health, above its RDS database." /></figure>
+              </article>
+              <article class="tour-step" data-step="2">
+                <p class="kicker">Monitoring</p>
+                <h3>Live CPU and memory, per service.</h3>
+                <p>Charts read from CloudWatch for every service, with a crosshair to read any minute.</p>
+                <figure class="window step-shot"><img src="screenshots/monitoring.webp" width="1440" height="900" loading="lazy" alt="CPU and memory charts for the web, api and checkout services." /></figure>
+              </article>
+              <article class="tour-step" data-step="3">
+                <p class="kicker">Health</p>
+                <h3>Know when something is wrong.</h3>
+                <p>Running and desired tasks, rollouts, load-balancer targets with the reason any fail, and the CloudWatch alarms that watch it, firing ones first.</p>
+                <figure class="window step-shot"><img src="screenshots/health.webp" width="1440" height="900" loading="lazy" alt="The Health section: a healthy application, its database and three CloudWatch alarms." /></figure>
+              </article>
+              <article class="tour-step" data-step="4">
+                <p class="kicker">Logs</p>
+                <h3>Follow container logs as they happen.</h3>
+                <p>Pick a service and a window from five minutes to a day, filter by text, pause and follow. Every line shows its time and its task.</p>
+                <figure class="window step-shot"><img src="screenshots/logs.webp" width="1440" height="900" loading="lazy" alt="Container logs of the web service, followed live, above the numbered deployments." /></figure>
+              </article>
+              <article class="tour-step" data-step="5">
+                <p class="kicker">Recommendations</p>
+                <h3>Advice that pays for itself.</h3>
+                <p>
+                  Right-sizing from real usage with the saving priced, schedules for quiet hours, ports open to the internet, broad IAM policies, plain-text
+                  secrets and image findings. Resize or schedule in one click.
+                </p>
+                <figure class="window step-shot"><img src="screenshots/recommendations.webp" width="1440" height="900" loading="lazy" alt="Recommendations: resize an oversized service, schedule a quiet one and review image findings, with the monthly savings." /></figure>
+              </article>
+              <article class="tour-step" data-step="6">
+                <p class="kicker">Environments</p>
+                <h3>Promote uat to prod, with confidence.</h3>
+                <p>Run an application as uat and prod, each in its own network, account or region. See what differs, then promote: prod keeps its own size, schedules and settings.</p>
+                <figure class="window step-shot"><img src="screenshots/environments.webp" width="1440" height="900" loading="lazy" alt="The uat and prod environments side by side, with the images that differ and a Promote uat to prod button." /></figure>
+              </article>
+              <article class="tour-step" data-step="7">
+                <p class="kicker">Cost</p>
+                <h3>Know the bill before AWS sends it.</h3>
+                <p>Every application's monthly cost at AWS list prices, line by line, while you size it and once it runs.</p>
+                <figure class="window step-shot"><img src="screenshots/cost.webp" width="1440" height="900" loading="lazy" alt="A monthly cost estimate of about $460, line by line: instances, load balancer, addresses and the RDS database." /></figure>
+              </article>
+              <article class="tour-step" data-step="8">
+                <p class="kicker">Images</p>
+                <h3>From a folder of code to a container.</h3>
+                <p>
+                  doIT recognises Node.js, Python, .NET, Go, Java and static sites, writes the Dockerfile, builds with Docker or Podman, pushes to Amazon ECR,
+                  and checks every dependency's license against your policy.
+                </p>
+                <figure class="window step-shot"><img src="screenshots/images.webp" width="1440" height="900" loading="lazy" alt="The Images page: a Node.js project detected, ready to build, with its dependency licenses checked." /></figure>
+              </article>
+            </div>
+            <div class="tour-stage">
+              <div class="tour-sticky">
+                <figure class="window tour-window">
+                  <div class="window-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span><span class="window-title">doIT</span></div>
+                  <div class="tour-screens">
+                    <img class="is-active" data-step="0" src="screenshots/dashboard.webp" width="1440" height="900" alt="The dashboard with six applications and their live CPU." />
+                    <img data-step="1" src="screenshots/components.webp" width="1440" height="900" loading="lazy" alt="An application's three services with their routes, tasks and health." />
+                    <img data-step="2" src="screenshots/monitoring.webp" width="1440" height="900" loading="lazy" alt="CPU and memory charts per service." />
+                    <img data-step="3" src="screenshots/health.webp" width="1440" height="900" loading="lazy" alt="The Health section with CloudWatch alarms." />
+                    <img data-step="4" src="screenshots/logs.webp" width="1440" height="900" loading="lazy" alt="Container logs followed live." />
+                    <img data-step="5" src="screenshots/recommendations.webp" width="1440" height="900" loading="lazy" alt="Recommendations with their monthly savings." />
+                    <img data-step="6" src="screenshots/environments.webp" width="1440" height="900" loading="lazy" alt="The uat and prod environments, ready to promote." />
+                    <img data-step="7" src="screenshots/cost.webp" width="1440" height="900" loading="lazy" alt="A monthly cost estimate, line by line." />
+                    <img data-step="8" src="screenshots/images.webp" width="1440" height="900" loading="lazy" alt="A Node.js project ready to build, with its licenses checked." />
+                  </div>
+                </figure>
+                <ol class="tour-dots" aria-label="Tour steps">
+                  <li><button type="button" class="is-active" data-step="0" aria-label="Dashboard"></button></li>
+                  <li><button type="button" data-step="1" aria-label="Services"></button></li>
+                  <li><button type="button" data-step="2" aria-label="Monitoring"></button></li>
+                  <li><button type="button" data-step="3" aria-label="Health"></button></li>
+                  <li><button type="button" data-step="4" aria-label="Logs"></button></li>
+                  <li><button type="button" data-step="5" aria-label="Recommendations"></button></li>
+                  <li><button type="button" data-step="6" aria-label="Environments"></button></li>
+                  <li><button type="button" data-step="7" aria-label="Cost"></button></li>
+                  <li><button type="button" data-step="8" aria-label="Images"></button></li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Statement ============ -->
+      <section class="statement" aria-label="What doIT stands for">
+        <div class="wrap">
+          <p class="scrub" data-scrub>
+            doIT runs Terraform for you, in your account, with your keys, and keeps the state in your own S3 bucket. Stop using it tomorrow, and
+            everything it built keeps running.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ How it works ============ -->
+      <section class="how" id="how">
+        <div class="wrap">
+          <header class="intro" data-reveal>
+            <p class="eyebrow">How it works</p>
+            <h2 class="headline">Runs on your computer.<br /><span class="gradient-text">Builds in your account.</span></h2>
+          </header>
+
+          <figure class="flow" data-reveal aria-label="doIT on your computer runs Terraform, which builds a network, a load balancer, services and a database in your AWS account.">
+            <div class="flow-node flow-you">
+              <p class="flow-label">Your computer</p>
+              <div class="chip chip-app"><span class="brand-mark" aria-hidden="true">◆</span> doIT</div>
+              <div class="chip">Terraform <span class="chip-note">pinned · verified</span></div>
+              <div class="chip">~/.aws <span class="chip-note">your keys</span></div>
+            </div>
+            <div class="flow-link" aria-hidden="true"><span class="flow-pulse"></span><span class="flow-caption">HTTPS, signed with your keys</span></div>
+            <div class="flow-node flow-aws">
+              <p class="flow-label">Your AWS account</p>
+              <div class="vpc">
+                <p class="vpc-label">VPC · public and private subnets · NAT</p>
+                <div class="vpc-row">
+                  <div class="chip chip-lb">Load balancer</div>
+                  <div class="fan" aria-hidden="true"><i></i><i></i><i></i></div>
+                  <div class="svc-stack">
+                    <div class="chip chip-svc">web <span class="chip-note">/*</span></div>
+                    <div class="chip chip-svc">api <span class="chip-note">/api/*</span></div>
+                    <div class="chip chip-svc">checkout <span class="chip-note">/checkout/*</span></div>
+                  </div>
+                  <div class="fan fan-in" aria-hidden="true"><i></i><i></i><i></i></div>
+                  <div class="chip chip-db">PostgreSQL</div>
+                </div>
+              </div>
+              <div class="aws-row">
+                <div class="chip">S3 state <span class="chip-note">with locking</span></div>
+                <div class="chip">CloudWatch <span class="chip-note">metrics · logs · alarms</span></div>
+                <div class="chip">ECR <span class="chip-note">your images</span></div>
+              </div>
+            </div>
+          </figure>
+
+          <ol class="how-steps">
+            <li data-reveal>
+              <h3>On your computer</h3>
+              <p>doIT signs every AWS request with your own profile. Keys are checked with STS and never leave your machine.</p>
+            </li>
+            <li data-reveal>
+              <h3>Terraform, handled</h3>
+              <p>It downloads a pinned, checksum-verified Terraform release and runs it, one run at a time, with the output on screen.</p>
+            </li>
+            <li data-reveal>
+              <h3>Built in your account</h3>
+              <p>Networks, load balancers, ECS services and databases are created in your AWS account, on your bill, under your control.</p>
+            </li>
+            <li data-reveal>
+              <h3>State you own</h3>
+              <p>Terraform state lives in an S3 bucket in your account, with locking, so the desktop app and the CLI never collide.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ Features ============ -->
+      <section class="features" id="features">
+        <div class="wrap">
+          <header class="intro" data-reveal>
+            <p class="eyebrow">Features</p>
+            <h2 class="headline">Day one to day two hundred.</h2>
+            <p class="lede">From the first network to the hundredth deployment, the work you would script, done in one place.</p>
+          </header>
+          <div class="bento">
+            <article class="tile tile-cli" data-reveal>
+              <div class="tile-copy">
+                <p class="kicker">Config as code</p>
+                <h3>The app, or one command.</h3>
+                <p>Describe an application in YAML and apply it. Diff it in CI, export a running one, promote between environments. Everything in the app is in the <code>doit</code> CLI too.</p>
+              </div>
+              <div class="terminal" aria-label="An example terminal session with the doit CLI">
+                <div class="terminal-bar" aria-hidden="true"><span class="dots"><i></i><i></i><i></i></span></div>
+                <pre class="terminal-body" data-type><span class="t-line"><span class="t-prompt">$</span> doit diff -f shop.yaml --environment prod</span>
+<span class="t-line t-out">~ web   image acme/shop-web:2.3.1 → 2.4.0</span>
+<span class="t-line t-out">~ api   desired tasks 2 → 3</span>
+<span class="t-line"><span class="t-prompt">$</span> doit apply -f shop.yaml --environment prod</span>
+<span class="t-line t-out">Applying 2 changes to Shop (prod)…</span>
+<span class="t-line t-ok">✓ Deployment #12 is running</span>
+<span class="t-line"><span class="t-prompt">$</span> doit application health --id shop-prod</span>
+<span class="t-line t-ok">✓ healthy · web 3/3 · api 3/3 · checkout 2/2</span></pre>
+              </div>
+            </article>
+
+            <article class="tile" data-reveal>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.2" /><circle cx="5" cy="18" r="2.2" /><circle cx="19" cy="18" r="2.2" /><path d="M12 7.2v4.3M12 11.5 6.4 16.2M12 11.5l5.6 4.7" /></svg>
+              <h3>Networking, ready</h3>
+              <p>A VPC with public and private subnets, NAT and endpoints, or adopt one you already have. doIT picks a free range if you don't.</p>
+            </article>
+            <article class="tile" data-reveal>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3.5 7.5 12 3l8.5 4.5v9L12 21l-8.5-4.5z" /><path d="M3.5 7.5 12 12l8.5-4.5M12 12v9" /></svg>
+              <h3>No Dockerfile needed</h3>
+              <p>Point at a project folder; doIT detects the stack, builds the image and pushes it to Amazon ECR.</p>
+            </article>
+            <article class="tile" data-reveal>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6z" /><path d="m8.5 12 2.5 2.5 4.5-5" /></svg>
+              <h3>License policy</h3>
+              <p>Every npm, PyPI, Go, Alpine, Debian and RPM package checked. Warn on or block what you forbid, and save the SBOM.</p>
+            </article>
+            <article class="tile" data-reveal>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.4-5.7" /><path d="M4 4v4.5h4.5" /><path d="M12 8v4l3 2" /></svg>
+              <h3>Roll back anything</h3>
+              <p>Every apply is a numbered deployment. Edit in place, restart, retry a failed change or return to any earlier one.</p>
+            </article>
+            <article class="tile" data-reveal>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2.5-6 5 12 2.5-6h4" /></svg>
+              <h3>Drift, caught</h3>
+              <p>A read-only plan shows what changed outside doIT, a console hotfix or a deleted resource. Reconcile it in one click.</p>
+            </article>
+            <article class="tile" data-reveal>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7" ry="2.5" /><path d="M5 5.5v13c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5v-13" /><path d="M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5" /></svg>
+              <h3>PostgreSQL, two ways</h3>
+              <p>Versions 16 to 18: a disposable task for tests, or Amazon RDS with backups, Multi-AZ, snapshots and in-place upgrades.</p>
+            </article>
+            <article class="tile" data-reveal>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><path d="M12 7v5l3.5 2" /></svg>
+              <h3>Scheduled capacity</h3>
+              <p>Four tasks on weekdays, one at night, in your time zone. AWS applies the schedule even while doIT is closed.</p>
+            </article>
+            <article class="tile" data-reveal>
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2" /><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" /></svg>
+              <h3>Never stuck</h3>
+              <p>A run that stopped half-way can leave a state lock. doIT shows who holds it and releases it once nothing uses it.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Yours ============ -->
+      <section class="keep">
+        <div class="wrap keep-inner" data-reveal>
+          <p class="eyebrow">Yours to keep</p>
+          <h2 class="headline">Your infrastructure never depends on doIT.</h2>
+          <p class="lede">
+            In every plan, and after a plan lapses: destroy and teardown, forget, export, and read-only access to everything you built. doIT never
+            disables, degrades or deletes what runs in your account.
+          </p>
+        </div>
+      </section>
+
+      <!-- ============ Download ============ -->
+      <section id="download" class="section download">
+        <div class="wrap">
+          <header class="intro" data-reveal>
+            <p class="eyebrow">Download</p>
+            <h2 class="headline">Get doIT.</h2>
+            <p id="release-meta" class="lede"></p>
+          </header>
+          <div id="downloads" class="grid platforms"></div>
+          <p id="checksums" class="muted small"></p>
+        </div>
+      </section>
+
+      <section id="install" class="section">
+        <div class="wrap">
+          <h2 class="subtitle">Install</h2>
+          <p class="muted">doIT is not code-signed yet, so each operating system asks you to confirm the first time you open it.</p>
+          <div class="grid platforms">
+            <article class="card" id="install-mac">
+              <h3>macOS</h3>
+              <ol>
+                <li>Open the <code>.dmg</code> and drag <strong>doIT</strong> to Applications.</li>
+                <li>If macOS will not open doIT, go to <strong>System Settings › Privacy &amp; Security</strong> and click <strong>Open Anyway</strong> next to doIT.</li>
+                <li>
+                  If it says doIT “is damaged”, run this in Terminal, then open it again:
+                  <code class="block">xattr -dr com.apple.quarantine /Applications/doIT.app</code>
+                </li>
+              </ol>
+            </article>
+            <article class="card" id="install-windows">
+              <h3>Windows</h3>
+              <ol>
+                <li>Run the <code>.exe</code> installer for your PC, x64 or ARM64, and choose where to install doIT.</li>
+                <li>If Microsoft Defender SmartScreen shows “Windows protected your PC”, click <strong>More info</strong>, then <strong>Run anyway</strong>.</li>
+                <li>Open doIT from the Start menu.</li>
+              </ol>
+            </article>
+            <article class="card" id="install-linux">
+              <h3>Linux</h3>
+              <ol>
+                <li>
+                  <strong>AppImage:</strong> make it executable and run it:
+                  <code class="block">chmod +x doIT-*.AppImage &amp;&amp; ./doIT-*.AppImage</code>
+                  AppImages need FUSE 2; on Ubuntu install <code>libfuse2</code> (<code>libfuse2t64</code> on 24.04).
+                </li>
+                <li>
+                  <strong>Debian or Ubuntu:</strong>
+                  <code class="block">sudo apt install ./doIT-*.deb</code>
+                </li>
+              </ol>
+            </article>
+          </div>
+          <h3 class="subhead">Check a download</h3>
+          <p class="muted">Compare the file's SHA-256 with the one listed above:</p>
+          <ul class="checks">
+            <li>macOS: <code>shasum -a 256 &lt;file&gt;</code></li>
+            <li>Linux: <code>sha256sum &lt;file&gt;</code></li>
+            <li>Windows (PowerShell): <code>Get-FileHash &lt;file&gt; -Algorithm SHA256</code></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="requirements" class="section">
+        <div class="wrap">
+          <h2 class="subtitle">Requirements</h2>
+          <ul class="requirements">
+            <li>A 64-bit Mac (Apple Silicon or Intel), Windows PC or Linux PC, x64 or ARM64.</li>
+            <li>An AWS account, and access keys or an AWS CLI profile for it. They stay on your computer and are never sent to doIT.</li>
+            <li>Docker or Podman, only to build container images.</li>
+            <li>Internet access: doIT downloads Terraform on first use and talks to AWS.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <span><span class="brand-mark" aria-hidden="true">◆</span> doIT</span>
+        <span id="footer-version" class="muted"></span>
+      </div>
+    </footer>
+  </body>
+</html>
