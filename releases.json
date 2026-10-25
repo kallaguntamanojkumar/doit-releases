@@ -50,6 +50,15 @@
     },
     {
       "platform": "windows",
+      "arch": "ia32",
+      "kind": "exe",
+      "name": "doIT-0.1.0-win-ia32.exe",
+      "size": 105670781,
+      "sha256": "8efa5d5944b4e5560a161ceb96e89ad58cec6ffb8ff449133ed5416fec09000e",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.1.0/doIT-0.1.0-win-ia32.exe"
+    },
+    {
+      "platform": "windows",
       "arch": "x64",
       "kind": "exe",
       "name": "doIT-0.1.0-win-x64.exe",
@@ -65,6 +74,15 @@
       "size": 159977470,
       "sha256": "f08c9f8434930a94b6b5774b60ac9f1340ffa680771832e4b553e64e1b9f4c1d",
       "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.1.0/doIT-0.1.0-win-arm64.zip"
+    },
+    {
+      "platform": "windows",
+      "arch": "ia32",
+      "kind": "win-zip",
+      "name": "doIT-0.1.0-win-ia32.zip",
+      "size": 143069285,
+      "sha256": "e824f4d4154f97dfed3781fa8827bb6303d33d12f3066c86f5098fb44b09968b",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.1.0/doIT-0.1.0-win-ia32.zip"
     },
     {
       "platform": "windows",

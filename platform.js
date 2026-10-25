@@ -61,17 +61,18 @@ export function detectPlatform(userAgent = '', hintPlatform = '') {
   return 'unknown'
 }
 
-// From the browser's architecture client hint ('arm' or 'x86'); null when the browser does not
-// say. Safari and Firefox never do, so a Mac without the hint is offered both builds.
-export function detectArch(hintArchitecture) {
+// From the browser's architecture and bitness client hints ('arm' or 'x86', '64' or '32'); null
+// when the browser does not say. Safari and Firefox never do, so a Mac without the hint is offered
+// both builds, and a PC without it the x64 one.
+export function detectArch(hintArchitecture, hintBitness) {
   if (hintArchitecture === 'arm') return 'arm64'
-  if (hintArchitecture === 'x86') return 'x64'
+  if (hintArchitecture === 'x86') return hintBitness === '32' ? 'ia32' : 'x64'
   return null
 }
 
 export function archLabel(platform, arch) {
   if (platform === 'mac') return arch === 'arm64' ? 'Apple Silicon' : arch === 'x64' ? 'Intel' : arch
-  return arch === 'x64' ? '64-bit (x64)' : arch === 'arm64' ? 'ARM64' : arch
+  return arch === 'x64' ? '64-bit (x64)' : arch === 'arm64' ? 'ARM64' : arch === 'ia32' ? '32-bit (x86)' : arch
 }
 
 const kindRank = (f) => KINDS[f.platform]?.indexOf(f.kind) ?? 99

@@ -36,8 +36,8 @@ async function loadManifest() {
 
 async function visitorArch() {
   try {
-    const hints = await navigator.userAgentData?.getHighEntropyValues?.(['architecture'])
-    return detectArch(hints?.architecture)
+    const hints = await navigator.userAgentData?.getHighEntropyValues?.(['architecture', 'bitness'])
+    return detectArch(hints?.architecture, hints?.bitness)
   } catch {
     return null
   }
