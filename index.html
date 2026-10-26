@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; frame-src https://www.youtube-nocookie.com; base-uri 'none'; form-action 'none'"
     />
     <title>doIT · Your AWS infrastructure, one desktop app</title>
     <meta
@@ -17,12 +17,14 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="motion.js"></script>
     <script type="module" src="app.js"></script>
+    <script type="module" src="video.js"></script>
   </head>
   <body>
     <header class="nav" id="nav">
       <div class="wrap nav-row">
         <a class="brand" href="#top" aria-label="doIT home"><span class="brand-mark" aria-hidden="true">◆</span> doIT</a>
         <nav aria-label="Sections">
+          <a href="#video">Video</a>
           <a href="#tour">Tour</a>
           <a href="#how">How it works</a>
           <a href="#features">Features</a>
@@ -52,7 +54,10 @@
           <noscript>
             <p class="notice">Turn on JavaScript to see the downloads, or open <a href="releases.json">releases.json</a>.</p>
           </noscript>
-          <a class="more-link" href="#tour" data-reveal>Take the tour <span aria-hidden="true">›</span></a>
+          <p class="more-links" data-reveal>
+            <a class="more-link" href="#video">Watch the video <span aria-hidden="true">›</span></a>
+            <a class="more-link" href="#tour">Take the tour <span aria-hidden="true">›</span></a>
+          </p>
         </div>
         <div class="hero-stage" id="hero-stage">
           <figure class="window hero-window">
@@ -83,6 +88,23 @@
             <p class="stat-value"><span data-count="100">100</span>%</p>
             <p class="stat-label">of what it builds lives in your own AWS account</p>
           </div>
+        </div>
+      </section>
+
+      <!-- ============ Video ============ -->
+      <section class="watch" id="video">
+        <div class="wrap">
+          <header class="intro" data-reveal>
+            <p class="eyebrow">The video</p>
+            <h2 class="headline">doIT in three minutes.</h2>
+          </header>
+          <!-- Plays on YouTube's privacy-enhanced player once clicked (video.js); until then nothing loads from YouTube. -->
+          <figure class="window watch-window" data-reveal>
+            <a class="video-poster" href="https://www.youtube.com/watch?v=2AR8W8Kp3f4" data-youtube="2AR8W8Kp3f4" aria-label="Play the doIT overview video, 3 minutes">
+              <img src="video.webp" width="1280" height="720" loading="lazy" alt="" />
+              <span class="video-play" aria-hidden="true"></span>
+            </a>
+          </figure>
         </div>
       </section>
 
