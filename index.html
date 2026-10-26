@@ -14,6 +14,7 @@
     />
     <meta name="theme-color" content="#000000" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <link rel="stylesheet" href="styles.css" />
     <script src="motion.js"></script>
     <script type="module" src="app.js"></script>
@@ -22,7 +23,7 @@
   <body>
     <header class="nav" id="nav">
       <div class="wrap nav-row">
-        <a class="brand" href="#top" aria-label="doIT home"><span class="brand-mark" aria-hidden="true">◆</span> doIT</a>
+        <a class="brand" href="#top" aria-label="doIT home"><img class="brand-mark" src="mark.svg" width="20" height="20" alt="" /> doIT</a>
         <nav aria-label="Sections">
           <a href="#video">Video</a>
           <a href="#tour">Tour</a>
@@ -236,7 +237,7 @@
           <figure class="flow" data-reveal aria-label="doIT on your computer runs Terraform, which builds a network, a load balancer, services and a database in your AWS account.">
             <div class="flow-node flow-you">
               <p class="flow-label">Your computer</p>
-              <div class="chip chip-app"><span class="brand-mark" aria-hidden="true">◆</span> doIT</div>
+              <div class="chip chip-app"><img class="brand-mark" src="mark.svg" width="20" height="20" alt="" /> doIT</div>
               <div class="chip">Terraform <span class="chip-note">pinned · verified</span></div>
               <div class="chip">~/.aws <span class="chip-note">your keys</span></div>
             </div>
@@ -447,7 +448,7 @@
 
     <footer class="site-footer">
       <div class="wrap footer-row">
-        <span><span class="brand-mark" aria-hidden="true">◆</span> doIT</span>
+        <span><img class="brand-mark" src="mark.svg" width="20" height="20" alt="" /> doIT</span>
         <span id="footer-version" class="muted"></span>
       </div>
     </footer>
