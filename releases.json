@@ -1,6 +1,134 @@
 {
   "product": "doIT",
-  "version": null,
-  "releasedAt": null,
-  "files": []
+  "version": "0.2.0",
+  "releasedAt": "2026-10-27",
+  "files": [
+    {
+      "platform": "mac",
+      "arch": "arm64",
+      "kind": "dmg",
+      "name": "doIT-0.2.0-mac-arm64.dmg",
+      "size": 137325695,
+      "sha256": "40fc575d9cf5faf80295c639b19134b18f21dfe59ef0419feec3f03154ee8360",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-mac-arm64.dmg"
+    },
+    {
+      "platform": "mac",
+      "arch": "x64",
+      "kind": "dmg",
+      "name": "doIT-0.2.0-mac-x64.dmg",
+      "size": 144286670,
+      "sha256": "013efa1e1ebbcfb37557b7fadef25e1b7c80c4a429486bad4bea4f0ca5d49454",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-mac-x64.dmg"
+    },
+    {
+      "platform": "mac",
+      "arch": "arm64",
+      "kind": "mac-zip",
+      "name": "doIT-0.2.0-mac-arm64.zip",
+      "size": 132232820,
+      "sha256": "f18de284767efd9ffa714ac338c9310a57624e175536bcbad118efb4f358c00e",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-mac-arm64.zip"
+    },
+    {
+      "platform": "mac",
+      "arch": "x64",
+      "kind": "mac-zip",
+      "name": "doIT-0.2.0-mac-x64.zip",
+      "size": 139173246,
+      "sha256": "81be6c5ec3a95a66b633433031d0e2a615ba4b64fd9a1b1d7227ac1549ecc663",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-mac-x64.zip"
+    },
+    {
+      "platform": "windows",
+      "arch": "arm64",
+      "kind": "exe",
+      "name": "doIT-0.2.0-win-arm64.exe",
+      "size": 119476834,
+      "sha256": "dc89d3edb44eb26bd87b3600d0650e42a45d6726439ca3f9debd5fe21d8d7f5f",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-win-arm64.exe"
+    },
+    {
+      "platform": "windows",
+      "arch": "ia32",
+      "kind": "exe",
+      "name": "doIT-0.2.0-win-ia32.exe",
+      "size": 106239744,
+      "sha256": "7806b44ce19eccdeee81703e11794ac5627c95f8bc88d6de4cb8610298eb240c",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-win-ia32.exe"
+    },
+    {
+      "platform": "windows",
+      "arch": "x64",
+      "kind": "exe",
+      "name": "doIT-0.2.0-win-x64.exe",
+      "size": 118465012,
+      "sha256": "301c8d7712978c50824104a732a84764ba187dc6b8731decec22a3046d8e731b",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-win-x64.exe"
+    },
+    {
+      "platform": "windows",
+      "arch": "arm64",
+      "kind": "win-zip",
+      "name": "doIT-0.2.0-win-arm64.zip",
+      "size": 160604700,
+      "sha256": "7553e3e7e32f7533b05e263e3094edd4028f770f8606c5b2cde8b80384a7b34c",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-win-arm64.zip"
+    },
+    {
+      "platform": "windows",
+      "arch": "ia32",
+      "kind": "win-zip",
+      "name": "doIT-0.2.0-win-ia32.zip",
+      "size": 143697060,
+      "sha256": "d6ad4918e8da23787087ec141dbb9fab9b9cbf08a549c50eefb0f31c54582786",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-win-ia32.zip"
+    },
+    {
+      "platform": "windows",
+      "arch": "x64",
+      "kind": "win-zip",
+      "name": "doIT-0.2.0-win-x64.zip",
+      "size": 162214408,
+      "sha256": "651163c360639507f4c9a254e940ffbb073e2a6c784c05378a9870f787cb6889",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-win-x64.zip"
+    },
+    {
+      "platform": "linux",
+      "arch": "arm64",
+      "kind": "appimage",
+      "name": "doIT-0.2.0-linux-arm64.AppImage",
+      "size": 148053286,
+      "sha256": "d4f658e610f0119046015fef1da061bdb85dc776512b73f81ee729000dcf4e03",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-linux-arm64.AppImage"
+    },
+    {
+      "platform": "linux",
+      "arch": "x64",
+      "kind": "appimage",
+      "name": "doIT-0.2.0-linux-x86_64.AppImage",
+      "size": 146883888,
+      "sha256": "7dc583928e16056b9afcc07ce82b937661a22e2e7f286689e705c27e318033c4",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-linux-x86_64.AppImage"
+    },
+    {
+      "platform": "linux",
+      "arch": "arm64",
+      "kind": "deb",
+      "name": "doIT-0.2.0-linux-arm64.deb",
+      "size": 94730010,
+      "sha256": "9ff7d94617bbfe15ed04f8d84449550b8e0dcff246c614788af48f1f22e9f228",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-linux-arm64.deb"
+    },
+    {
+      "platform": "linux",
+      "arch": "x64",
+      "kind": "deb",
+      "name": "doIT-0.2.0-linux-amd64.deb",
+      "size": 99567292,
+      "sha256": "eeddf66a4c1279a13b96c720faabbb122c1be92b3f0b31c37131aaba6f5df0f4",
+      "url": "https://github.com/kallaguntamanojkumar/doit-releases/releases/download/v0.2.0/doIT-0.2.0-linux-amd64.deb"
+    }
+  ],
+  "checksums": "SHA256SUMS.txt"
 }
