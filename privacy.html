@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <title>Privacy policy · doIT</title>
+    <meta name="description" content="What doIT collects, why, who handles it, and how to have it deleted." />
+    <meta name="theme-color" content="#000000" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav" id="nav">
+      <div class="wrap nav-row">
+        <a class="brand" href="./" aria-label="doIT home"><img class="brand-mark" src="mark.svg" width="20" height="20" alt="" /> doIT</a>
+        <a class="nav-cta" href="./#download">Download</a>
+      </div>
+    </header>
+
+    <main class="wrap legal">
+      <h1>Privacy policy</h1>
+      <p class="muted">Last updated 27 October 2026</p>
+
+      <p>
+        doIT is a desktop app for macOS, Windows and Linux that builds and runs your applications in your own AWS account. This page
+        says what doIT collects, why, who else handles it, and what you can do about it. Questions:
+        <a href="mailto:doit4u.support@gmail.com">doit4u.support@gmail.com</a>.
+      </p>
+
+      <h2>In short</h2>
+      <ul>
+        <li>doIT runs on your computer. Your AWS keys, code and AWS resources stay with you, and doIT never collects them.</li>
+        <li>To license the app, doIT's licensing service keeps your email address, your name, details of the computers you use doIT on, your orders and your support requests.</li>
+        <li>doIT has no analytics or advertising, and never sells or rents your data.</li>
+      </ul>
+
+      <h2>What doIT keeps</h2>
+      <div class="legal-table">
+        <table>
+          <thead>
+            <tr><th>Data</th><th>Why</th><th>Where</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Your email address</td><td>To send and find your licence</td><td>Licensing service</td></tr>
+            <tr><td>Your name, from the Google account you sign in with</td><td>To greet you in doIT's emails</td><td>Licensing service</td></tr>
+            <tr>
+              <td>For each computer: a hashed machine ID, its name, operating system, doIT version, and first and last check-in</td>
+              <td>To keep a licence to its number of computers</td>
+              <td>Licensing service</td>
+            </tr>
+            <tr><td>Orders: plan, amount, status, and the UPI reference (UTR) if you give one</td><td>To match your payment</td><td>Licensing service</td></tr>
+            <tr>
+              <td>Support requests: your message, the address to reply to, and the diagnostics you chose to send</td>
+              <td>To answer you</td>
+              <td>Licensing service and doIT's support inbox</td>
+            </tr>
+            <tr>
+              <td>A count of orders and support requests per email address and per network (IP) address</td>
+              <td>To stop floods of requests</td>
+              <td>Licensing service, deleted after two days</td>
+            </tr>
+            <tr><td>Your licence, sign-in and settings</td><td>To run doIT</td><td>Your computer, in doIT's data folder</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>
+        The machine ID is hashed with a salt on your computer, and only the hash is sent. Licence keys and the secrets doIT gives each
+        computer are stored only as fingerprints, never as they are.
+      </p>
+
+      <h2>Signing in with Google</h2>
+      <p>
+        When you sign in with Google, doIT asks Google only for your basic profile: your email address, whether Google has verified it,
+        and your name. doIT uses them to find your licence, to keep you signed in on that computer, and to greet you by name in its
+        emails. You type your password only on Google's own page, so doIT never sees it. doIT does not read your Gmail, contacts, files
+        or any other Google data.
+      </p>
+      <p>
+        doIT's use of information received from Google APIs adheres to the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including
+        the Limited Use requirements.
+      </p>
+
+      <h2>What doIT never collects</h2>
+      <ul>
+        <li>Your AWS access keys. They stay in the AWS credentials file on your computer, and requests to AWS are signed there.</li>
+        <li>Your source code, project names, environment variables, commands or AWS resources.</li>
+        <li>Card numbers or bank logins. You pay by UPI from your own app, straight to doIT's bank account.</li>
+      </ul>
+      <p>
+        One exception is yours to make: a support request can include a failed run's log, which can name AWS resources. It is sent only
+        if you tick that box, after you have seen exactly what will be sent.
+      </p>
+
+      <h2>Who else handles your data</h2>
+      <ul>
+        <li><strong>Amazon Web Services</strong> runs doIT's licensing service, in its Sydney region, and sends doIT's emails through Amazon SES.</li>
+        <li><strong>Google</strong> handles sign-in, and doIT's support inbox is a Gmail account.</li>
+        <li><strong>Your bank and UPI app</strong> handle your payment. doIT's bank statement shows the payment, which can include the payer's name and UPI ID.</li>
+        <li><strong>GitHub</strong> hosts this website and doIT's installers. When doIT checks for updates, it downloads a small file from GitHub, which carries nothing about you or your licence.</li>
+        <li><strong>HashiCorp</strong> provides Terraform, which the app downloads from HashiCorp on its first run.</li>
+        <li><strong>YouTube</strong> plays the video on this site, from its privacy-enhanced player, only after you click play.</li>
+      </ul>
+      <p>
+        Like any web server, GitHub, YouTube and AWS can see the network address you connect from. doIT shares your data with no one
+        else, unless the law requires it.
+      </p>
+
+      <h2>How long doIT keeps it</h2>
+      <ul>
+        <li>The licensing service's logs are kept for 7 days, and never contain what you sent: no keys, emails, UTRs or sign-in tokens.</li>
+        <li>The counts that stop floods of requests are deleted after two days.</li>
+        <li>Everything else is kept while you have a licence, and afterwards only as long as the law requires for payment records.</li>
+      </ul>
+      <p>The licensing service's data is encrypted at rest, and only doIT's owner can reach it.</p>
+
+      <h2>Your choices</h2>
+      <ul>
+        <li><strong>See, correct or delete your data:</strong> email <a href="mailto:doit4u.support@gmail.com">doit4u.support@gmail.com</a> from the address on your licence. On request, doIT deletes your licence, computers and support requests, and keeps only the payment records the law requires.</li>
+        <li><strong>Free a computer:</strong> ask Help &amp; support in the app, or email the address above.</li>
+        <li><strong>Turn off update checks:</strong> in the app, under Help &amp; support, Updates.</li>
+        <li>
+          <strong>Remove doIT from your computer:</strong> uninstall it, then delete its data folder:
+          <code>~/Library/Application Support/doIT</code> on macOS, <code>%APPDATA%\doIT</code> on Windows, or <code>~/.config/doIT</code> on Linux.
+          This does not touch anything doIT built in your AWS account.
+        </li>
+      </ul>
+
+      <h2>Children</h2>
+      <p>doIT is made for people who run AWS accounts, and is not meant for children.</p>
+
+      <h2>Changes</h2>
+      <p>
+        When this policy changes, the date at the top changes. If a change affects what doIT collects, licence holders are told by email
+        first.
+      </p>
+
+      <h2>Contact</h2>
+      <p>
+        doIT, <a href="https://doit4u.in">doit4u.in</a>. Email <a href="mailto:doit4u.support@gmail.com">doit4u.support@gmail.com</a>.
+      </p>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-row">
+        <span><img class="brand-mark" src="mark.svg" width="20" height="20" alt="" /> doIT</span>
+        <span><a href="privacy.html">Privacy policy</a></span>
+      </div>
+    </footer>
+  </body>
+</html>
